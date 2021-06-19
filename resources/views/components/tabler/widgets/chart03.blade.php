@@ -1,6 +1,6 @@
 <div {{ $attributes }}>
     <div class="card-header">
-        <h3 class="card-title">Most Visited Pages</h3>
+        <h3 class="card-title">Jumlah Target Kegiatan KF</h3>
     </div>
     <div class="card-table table-responsive">
         <table class="table table-vcenter">
@@ -31,7 +31,7 @@
                 <td class="text-muted">4,896</td>
                 <td class="text-muted">3,654</td>
                 <td class="text-muted">82.54%</td>
-                <td class="text-end w-1">
+                <td class="w-1 text-end">
                     <div class="chart-sparkline chart-sparkline-sm"
                         id="sparkline-bounce-rate-1"></div>
                 </td>
@@ -55,7 +55,7 @@
                 <td class="text-muted">3,652</td>
                 <td class="text-muted">3,215</td>
                 <td class="text-muted">76.29%</td>
-                <td class="text-end w-1">
+                <td class="w-1 text-end">
                     <div class="chart-sparkline chart-sparkline-sm"
                         id="sparkline-bounce-rate-2"></div>
                 </td>
@@ -79,7 +79,7 @@
                 <td class="text-muted">3,256</td>
                 <td class="text-muted">2,865</td>
                 <td class="text-muted">72.65%</td>
-                <td class="text-end w-1">
+                <td class="w-1 text-end">
                     <div class="chart-sparkline chart-sparkline-sm"
                         id="sparkline-bounce-rate-3"></div>
                 </td>
@@ -103,7 +103,7 @@
                 <td class="text-muted">986</td>
                 <td class="text-muted">865</td>
                 <td class="text-muted">44.89%</td>
-                <td class="text-end w-1">
+                <td class="w-1 text-end">
                     <div class="chart-sparkline chart-sparkline-sm"
                         id="sparkline-bounce-rate-4"></div>
                 </td>
@@ -127,7 +127,7 @@
                 <td class="text-muted">912</td>
                 <td class="text-muted">822</td>
                 <td class="text-muted">41.12%</td>
-                <td class="text-end w-1">
+                <td class="w-1 text-end">
                     <div class="chart-sparkline chart-sparkline-sm"
                         id="sparkline-bounce-rate-5"></div>
                 </td>
@@ -151,7 +151,7 @@
                 <td class="text-muted">855</td>
                 <td class="text-muted">798</td>
                 <td class="text-muted">32.65%</td>
-                <td class="text-end w-1">
+                <td class="w-1 text-end">
                     <div class="chart-sparkline chart-sparkline-sm"
                         id="sparkline-bounce-rate-6"></div>
                 </td>

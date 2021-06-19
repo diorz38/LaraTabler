@@ -31,5 +31,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/backend/dashboard', funct
     return view('dashboard');
 })->name('backend.dashboard');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard2');
+    // return view('dashboard');
+    return view('home');
 })->name('dashboard');

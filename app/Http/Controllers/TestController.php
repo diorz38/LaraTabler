@@ -14,7 +14,7 @@ class TestController extends Controller
 
     public function index($kf = null)
     {
-        $response = Http::get('https://webapi.bps.go.id/v1/api/list/model/subject/domain/3215/page/'.$kf.env('BPS_WEBAPI_KEY'))->json();
+        $response = Http::get('https://webapi.bps.go.id/v1/api/list/model/subject/domain/3200/page/'.$kf.env('BPS_WEBAPI_KEY'))->json();
         return $response['data'][1];
 
     }

@@ -1,6 +1,6 @@
 <div {{ $attributes }}>
     <div class="card-header">
-        <h3 class="card-title">Social Media Traffic</h3>
+        <h3 class="card-title">Jumlah SubKegiatan KF</h3>
     </div>
     <table class="table card-table table-vcenter">
         <thead>
