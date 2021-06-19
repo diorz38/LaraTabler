@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Http\Request;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,15 +15,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 | Project::where('user_id',$this->currentUser)->whereMonth('tgl_berakhir', $this->currentMonth)->where('parent_id','!=',NULL)->paginate()
 */
-Route::get('/test', function () {
-        $currentMonth = \Carbon\Carbon::now()->month;
-        $currentUser = 104;
-
-    return \App\Models\Project::where('user_id',$currentUser)->whereMonth('tgl_berakhir', $currentMonth)->where('parent_id','!=',NULL)->paginate();
-
-});
+Route::get('/page/{kf}', [TestController::class,'index']);
 
 
+Route::get('/page/{page}', function () {
+    // $page = 1;
+    return view('welcome');
+})->name('welcome');
 
 Route::get('/', function () {
     return view('welcome');

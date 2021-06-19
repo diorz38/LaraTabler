@@ -658,6 +658,16 @@
                 </div>
             </div>
             <!-- This example requires Tailwind CSS v2.0+ -->
+
+            <div class="flex flex-col mx-2 mb-5">
+                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                        <div class="px-4 py-4 mx-4 my-4 bg-white border rounded-md shadow">
+                            <livewire:project-table />
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="flex flex-col mx-2 mb-5">
                 <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
@@ -733,6 +743,7 @@
             <div class="flex flex-col mx-2 mb-5">
                 <!-- This example requires Tailwind CSS v2.0+ -->
                 <div class="overflow-hidden bg-white shadow sm:rounded-lg">
+                    <livewire:forms.create-project/>
                     <div class="px-4 py-5 sm:px-6">
                         <h3 class="text-lg font-medium leading-6 text-gray-900">
                             Applicant Information
@@ -840,7 +851,6 @@
                 </div>
 
             </div>
-            <div class="flex flex-col mx-2 mb-5">
                 <!--
   This example requires Tailwind CSS v2.0+
 

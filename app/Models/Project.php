@@ -51,6 +51,7 @@ class Project extends Model
         'tgl_berakhir' => 'date',
         'tim' => 'array'
     ];
+    protected $appends      = ['namaPegawai'];
     protected static function newFactory()
     {
         return \Modules\Amake\Database\factories\ProjectFactory::new();
@@ -65,7 +66,9 @@ class Project extends Model
     {
         return $this->belongsTo('App\Models\User','user_id');
     }
-
+    public function getNamaPegawaiAttribute(){
+        return optional($this->user)->name;
+    }
     /**
      * Get the parent for this model.
      *
