@@ -1,4 +1,3 @@
-## LaraTabler
 
 Laratabler is laravel starter pack to speedup your project
 
