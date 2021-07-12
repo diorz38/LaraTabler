@@ -20,7 +20,12 @@ Template: **Tabler v1.0.0.beta3** (bootstrap 5)
 
 ### Screenshoot
 
-
+<p>
+  <img src="https://github.com/diorz38/laratabler/raw/main/docs/screenshot-1.png">
+  <img src="https://github.com/diorz38/laratabler/raw/main/docs/screenshot-2.png">
+  <img src="https://github.com/diorz38/laratabler/raw/main/docs/screenshot-3.png">
+  <img src="https://github.com/diorz38/laratabler/raw/main/docs/screenshot-4.png">
+</p>
 -----
 
 ### Example md syntax
