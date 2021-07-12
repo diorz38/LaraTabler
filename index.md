@@ -1,13 +1,28 @@
-## Welcome to GitHub Pages
+## LaraTabler
 
-You can use the [editor on GitHub](https://github.com/diorz38/lara8tabler/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Laratabler is laravel starter pack to speedup your project
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### what inside
 
-### Markdown
+The package that used is:
+1. Jetstrap (Bootstrap version of Jetstream)
+2. Spatie Laravel Permissions
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Template: Tabler v1.0.0.beta3 (bootstrap 5)
 
+### How to install
+1. run `create-project diorz38/laratabler example-app`
+2. run `touch database\database.sqlite` (default is sqlite, you can change to mysql, or other)
+3. run `php artisan migrate`
+4. run `php artisan lumki:setup` follow the **onscreen instructions**, to setup roles-permissions for jetstream
+5. and you ready to go
+
+### Screenshoot
+
+
+-----
+
+### Example md syntax
 ```markdown
 Syntax highlighted code block
 
