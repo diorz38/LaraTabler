@@ -18,7 +18,10 @@ Template: **Tabler v1.0.0.beta3** (bootstrap 5)
 6. and you ready to go
 
 ### Screenshoot
-
+![Image](https://github.com/diorz38/laratabler/blob/main/docs/screenshot-1.png)
+![Image](https://github.com/diorz38/laratabler/blob/main/docs/screenshot-2.png)
+![Image](https://github.com/diorz38/laratabler/blob/main/docs/screenshot-3.png)
+![Image](https://github.com/diorz38/laratabler/blob/main/docs/screenshot-4.png)
 
 -----
 
