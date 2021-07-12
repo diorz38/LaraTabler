@@ -2,17 +2,21 @@
     <div class="page-wrapper">
         <div class="container-xl">
             <!-- Page title -->
-            <x-slot name="header"><div class="container-xl"><div class="page-header d-print-none">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <h2 class="page-title">
-                            Form elements
-                        </h2>
+            <x-slot name="header">
+                <div class="container-xl">
+                    <div class="page-header d-print-none">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h2 class="page-title">
+                                    Form elements
+                                </h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
-        </div></x-slot name="header"><div class="page-header d-print-none">
+        </x-slot name="header">
+        <div class="page-header d-print-none">
             <div class="container-xl">
                 <div class="row row-cards">
                     <div class="col-12">
@@ -36,30 +40,31 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label">Password</label>
-                                                    <input type="text" class="form-control" name="example-password-input"
-                                                        placeholder="Input placeholder">
+                                                    <input type="text" class="form-control"
+                                                        name="example-password-input" placeholder="Input placeholder">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label">Disabled</label>
-                                                    <input type="text" class="form-control" name="example-disabled-input"
-                                                        placeholder="Disabled..." value="Well, she turned me into a newt."
-                                                        disabled>
+                                                    <input type="text" class="form-control"
+                                                        name="example-disabled-input" placeholder="Disabled..."
+                                                        value="Well, she turned me into a newt." disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label">Readonly</label>
-                                                    <input type="text" class="form-control" name="example-disabled-input"
-                                                        placeholder="Readonly..." value="Well, how'd you become king, then?"
-                                                        readonly>
+                                                    <input type="text" class="form-control"
+                                                        name="example-disabled-input" placeholder="Readonly..."
+                                                        value="Well, how'd you become king, then?" readonly>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label required">Required</label>
-                                                    <input type="text" class="form-control" name="example-required-input"
-                                                        placeholder="Required...">
+                                                    <input type="text" class="form-control"
+                                                        name="example-required-input" placeholder="Required...">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label">Textarea <span
                                                             class="form-label-description">56/100</span></label>
-                                                    <textarea class="form-control" name="example-textarea-input" rows="6"
+                                                    <textarea class="form-control" name="example-textarea-input"
+                                                        rows="6"
                                                         placeholder="Content..">Oh! Come and see the violence inherent in the system! Help, help, I'm being repressed! We shall say 'Ni' again to you, if you do not appease us. I'm not a witch. I'm not a witch. Camelot!</textarea>
                                                 </div>
                                                 <div class="mb-3">
@@ -81,7 +86,8 @@
                                                 <div class="mb-3">
                                                     <label class="form-label">Input group</label>
                                                     <div class="input-group mb-2">
-                                                        <input type="text" class="form-control" placeholder="Search for…">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Search for…">
                                                         <button class="btn" type="button">Go!</button>
                                                     </div>
                                                     <div class="input-group">
@@ -125,10 +131,10 @@
                                                         <input type="text" class="form-control" placeholder="Search…">
                                                         <span class="input-icon-addon">
                                                             <!-- Download SVG icon from http://tabler-icons.io/i/search -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
-                                                                height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                                stroke="currentColor" fill="none" stroke-linecap="round"
-                                                                stroke-linejoin="round">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                                                                width="24" height="24" viewBox="0 0 24 24"
+                                                                stroke-width="2" stroke="currentColor" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                 <circle cx="10" cy="10" r="7" />
                                                                 <line x1="21" y1="21" x2="15" y2="15" /></svg>
@@ -137,13 +143,14 @@
                                                     <div class="input-icon mb-3">
                                                         <span class="input-icon-addon">
                                                             <!-- Download SVG icon from http://tabler-icons.io/i/user -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
-                                                                height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                                stroke="currentColor" fill="none" stroke-linecap="round"
-                                                                stroke-linejoin="round">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                                                                width="24" height="24" viewBox="0 0 24 24"
+                                                                stroke-width="2" stroke="currentColor" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                 <circle cx="12" cy="7" r="4" />
-                                                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
+                                                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                                                </svg>
                                                         </span>
                                                         <input type="text" class="form-control" placeholder="Username">
                                                     </div>
@@ -173,7 +180,8 @@
                                                                 placeholder="Search for…">
                                                         </div>
                                                         <div class="col-auto">
-                                                            <a href="#" class="btn btn-white btn-icon" aria-label="Button">
+                                                            <a href="#" class="btn btn-white btn-icon"
+                                                                aria-label="Button">
                                                                 <!-- Download SVG icon from http://tabler-icons.io/i/search -->
                                                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon"
                                                                     width="24" height="24" viewBox="0 0 24 24"
@@ -212,10 +220,10 @@
                                                             placeholder="Search…">
                                                         <span class="input-icon-addon">
                                                             <!-- Download SVG icon from http://tabler-icons.io/i/search -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
-                                                                height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                                stroke="currentColor" fill="none" stroke-linecap="round"
-                                                                stroke-linejoin="round">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                                                                width="24" height="24" viewBox="0 0 24 24"
+                                                                stroke-width="2" stroke="currentColor" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                 <circle cx="10" cy="10" r="7" />
                                                                 <line x1="21" y1="21" x2="15" y2="15" /></svg>
@@ -315,8 +323,8 @@
                                                                     <line x1="18" y1="6" x2="6" y2="18" />
                                                                     <line x1="6" y1="6" x2="18" y2="18" /></svg>
                                                             </a>
-                                                            <a href="#" class="link-secondary ms-2" title="Search settings"
-                                                                data-bs-toggle="tooltip">
+                                                            <a href="#" class="link-secondary ms-2"
+                                                                title="Search settings" data-bs-toggle="tooltip">
                                                                 <!-- Download SVG icon from http://tabler-icons.io/i/adjustments -->
                                                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon"
                                                                     width="24" height="24" viewBox="0 0 24 24"
@@ -356,8 +364,8 @@
                                                         <label for="floating-input">Email address</label>
                                                     </div>
                                                     <div class="form-floating mb-3">
-                                                        <input type="password" class="form-control" id="floating-password"
-                                                            value="Password" autocomplete="off">
+                                                        <input type="password" class="form-control"
+                                                            id="floating-password" value="Password" autocomplete="off">
                                                         <label for="floating-password">Password</label>
                                                     </div>
                                                     <div class="form-floating">
@@ -408,7 +416,8 @@
                                                                     class="form-imagecheck-input" />
                                                                 <span class="form-imagecheck-figure">
                                                                     <img src="{{ asset('static/photos/6ab3200b14549f8a.jpg') }}"
-                                                                        alt="Healthy Dinner" class="form-imagecheck-image">
+                                                                        alt="Healthy Dinner"
+                                                                        class="form-imagecheck-image">
                                                                 </span>
                                                             </label>
                                                         </div>
@@ -742,7 +751,7 @@
                                                                     <circle cx="12" cy="12" r="4" />
                                                                     <path
                                                                         d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                                                                    </svg>
+                                                                </svg>
                                                             </span>
                                                         </label>
                                                         <label class="form-selectgroup-item">
@@ -757,7 +766,7 @@
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <path
                                                                         d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-                                                                    </svg>
+                                                                </svg>
                                                             </span>
                                                         </label>
                                                         <label class="form-selectgroup-item">
@@ -787,7 +796,7 @@
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <path
                                                                         d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-12" />
-                                                                    </svg>
+                                                                </svg>
                                                             </span>
                                                         </label>
                                                         <label class="form-selectgroup-item">
@@ -805,15 +814,18 @@
                                                                 class="form-selectgroup-input" checked>
                                                             <span class="form-selectgroup-label">
                                                                 <!-- Download SVG icon from http://tabler-icons.io/i/home -->
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon me-1"
-                                                                    width="24" height="24" viewBox="0 0 24 24"
-                                                                    stroke-width="2" stroke="currentColor" fill="none"
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="icon me-1" width="24" height="24"
+                                                                    viewBox="0 0 24 24" stroke-width="2"
+                                                                    stroke="currentColor" fill="none"
                                                                     stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <polyline points="5 12 3 12 12 3 21 12 19 12" />
-                                                                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-                                                                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-                                                                    </svg>
+                                                                    <path
+                                                                        d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                                                    <path
+                                                                        d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                                                                </svg>
                                                                 Home</span>
                                                         </label>
                                                         <label class="form-selectgroup-item">
@@ -821,14 +833,16 @@
                                                                 class="form-selectgroup-input">
                                                             <span class="form-selectgroup-label">
                                                                 <!-- Download SVG icon from http://tabler-icons.io/i/user -->
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon me-1"
-                                                                    width="24" height="24" viewBox="0 0 24 24"
-                                                                    stroke-width="2" stroke="currentColor" fill="none"
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="icon me-1" width="24" height="24"
+                                                                    viewBox="0 0 24 24" stroke-width="2"
+                                                                    stroke="currentColor" fill="none"
                                                                     stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <circle cx="12" cy="7" r="4" />
-                                                                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                                                                    </svg>
+                                                                    <path
+                                                                        d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                                                </svg>
                                                                 User</span>
                                                         </label>
                                                         <label class="form-selectgroup-item">
@@ -836,9 +850,10 @@
                                                                 class="form-selectgroup-input">
                                                             <span class="form-selectgroup-label">
                                                                 <!-- Download SVG icon from http://tabler-icons.io/i/circle -->
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon me-1"
-                                                                    width="24" height="24" viewBox="0 0 24 24"
-                                                                    stroke-width="2" stroke="currentColor" fill="none"
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="icon me-1" width="24" height="24"
+                                                                    viewBox="0 0 24 24" stroke-width="2"
+                                                                    stroke="currentColor" fill="none"
                                                                     stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <circle cx="12" cy="12" r="9" /></svg>
@@ -849,12 +864,14 @@
                                                                 class="form-selectgroup-input">
                                                             <span class="form-selectgroup-label">
                                                                 <!-- Download SVG icon from http://tabler-icons.io/i/square -->
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon me-1"
-                                                                    width="24" height="24" viewBox="0 0 24 24"
-                                                                    stroke-width="2" stroke="currentColor" fill="none"
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="icon me-1" width="24" height="24"
+                                                                    viewBox="0 0 24 24" stroke-width="2"
+                                                                    stroke="currentColor" fill="none"
                                                                     stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                    <rect x="4" y="4" width="16" height="16" rx="2" /></svg>
+                                                                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                                                                    </svg>
                                                                 Square</span>
                                                         </label>
                                                     </div>
@@ -886,7 +903,8 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label">Payment method</label>
-                                                    <div class="form-selectgroup form-selectgroup-boxes d-flex flex-column">
+                                                    <div
+                                                        class="form-selectgroup form-selectgroup-boxes d-flex flex-column">
                                                         <label class="form-selectgroup-item flex-fill">
                                                             <input type="radio" name="form-payment" value="visa"
                                                                 class="form-selectgroup-input">
@@ -935,10 +953,11 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label">Project Manager</label>
-                                                    <div class="form-selectgroup form-selectgroup-boxes d-flex flex-column">
+                                                    <div
+                                                        class="form-selectgroup form-selectgroup-boxes d-flex flex-column">
                                                         <label class="form-selectgroup-item flex-fill">
-                                                            <input type="checkbox" name="form-project-manager[]" value="1"
-                                                                class="form-selectgroup-input">
+                                                            <input type="checkbox" name="form-project-manager[]"
+                                                                value="1" class="form-selectgroup-input">
                                                             <div
                                                                 class="form-selectgroup-label d-flex align-items-center p-3">
                                                                 <div class="me-3">
@@ -956,8 +975,8 @@
                                                             </div>
                                                         </label>
                                                         <label class="form-selectgroup-item flex-fill">
-                                                            <input type="checkbox" name="form-project-manager[]" value="2"
-                                                                class="form-selectgroup-input" checked>
+                                                            <input type="checkbox" name="form-project-manager[]"
+                                                                value="2" class="form-selectgroup-input" checked>
                                                             <div
                                                                 class="form-selectgroup-label d-flex align-items-center p-3">
                                                                 <div class="me-3">
@@ -967,15 +986,16 @@
                                                                     class="form-selectgroup-label-content d-flex align-items-center">
                                                                     <span class="avatar me-3">JL</span>
                                                                     <div>
-                                                                        <div class="font-weight-medium">Jeffie Lewzey</div>
+                                                                        <div class="font-weight-medium">Jeffie Lewzey
+                                                                        </div>
                                                                         <div class="text-muted">Chemical Engineer</div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </label>
                                                         <label class="form-selectgroup-item flex-fill">
-                                                            <input type="checkbox" name="form-project-manager[]" value="3"
-                                                                class="form-selectgroup-input">
+                                                            <input type="checkbox" name="form-project-manager[]"
+                                                                value="3" class="form-selectgroup-input">
                                                             <div
                                                                 class="form-selectgroup-label d-flex align-items-center p-3">
                                                                 <div class="me-3">
@@ -986,15 +1006,16 @@
                                                                     <span class="avatar me-3"
                                                                         style="background-image: url({{ asset('static/avatars/002m.jpg') }})"></span>
                                                                     <div>
-                                                                        <div class="font-weight-medium">Mallory Hulme</div>
+                                                                        <div class="font-weight-medium">Mallory Hulme
+                                                                        </div>
                                                                         <div class="text-muted">Geologist IV</div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </label>
                                                         <label class="form-selectgroup-item flex-fill">
-                                                            <input type="checkbox" name="form-project-manager[]" value="4"
-                                                                class="form-selectgroup-input">
+                                                            <input type="checkbox" name="form-project-manager[]"
+                                                                value="4" class="form-selectgroup-input">
                                                             <div
                                                                 class="form-selectgroup-label d-flex align-items-center p-3">
                                                                 <div class="me-3">
@@ -1012,8 +1033,8 @@
                                                             </div>
                                                         </label>
                                                         <label class="form-selectgroup-item flex-fill">
-                                                            <input type="checkbox" name="form-project-manager[]" value="5"
-                                                                class="form-selectgroup-input">
+                                                            <input type="checkbox" name="form-project-manager[]"
+                                                                value="5" class="form-selectgroup-input">
                                                             <div
                                                                 class="form-selectgroup-label d-flex align-items-center p-3">
                                                                 <div class="me-3">
@@ -1025,7 +1046,8 @@
                                                                         style="background-image: url({{ asset('static/avatars/000f.jpg') }})"></span>
                                                                     <div>
                                                                         <div class="font-weight-medium">Emmy Levet</div>
-                                                                        <div class="text-muted">VP Product Management</div>
+                                                                        <div class="text-muted">VP Product Management
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1071,20 +1093,20 @@
                                                     <div class="btn-group w-100">
                                                         <a href="#" class="btn btn-white btn-icon" aria-label="Button">
                                                             <!-- Download SVG icon from http://tabler-icons.io/i/bold -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
-                                                                height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                                stroke="currentColor" fill="none" stroke-linecap="round"
-                                                                stroke-linejoin="round">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                                                                width="24" height="24" viewBox="0 0 24 24"
+                                                                stroke-width="2" stroke="currentColor" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                 <path d="M7 5h6a3.5 3.5 0 0 1 0 7h-6z" />
                                                                 <path d="M13 12h1a3.5 3.5 0 0 1 0 7h-7v-7" /></svg>
                                                         </a>
                                                         <a href="#" class="btn btn-white btn-icon" aria-label="Button">
                                                             <!-- Download SVG icon from http://tabler-icons.io/i/italic -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
-                                                                height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                                stroke="currentColor" fill="none" stroke-linecap="round"
-                                                                stroke-linejoin="round">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                                                                width="24" height="24" viewBox="0 0 24 24"
+                                                                stroke-width="2" stroke="currentColor" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                 <line x1="11" y1="5" x2="17" y2="5" />
                                                                 <line x1="7" y1="19" x2="13" y2="19" />
@@ -1092,32 +1114,32 @@
                                                         </a>
                                                         <a href="#" class="btn btn-white btn-icon" aria-label="Button">
                                                             <!-- Download SVG icon from http://tabler-icons.io/i/underline -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
-                                                                height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                                stroke="currentColor" fill="none" stroke-linecap="round"
-                                                                stroke-linejoin="round">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                                                                width="24" height="24" viewBox="0 0 24 24"
+                                                                stroke-width="2" stroke="currentColor" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                 <path d="M7 5v5a5 5 0 0 0 10 0v-5" />
                                                                 <path d="M5 19h14" /></svg>
                                                         </a>
                                                         <a href="#" class="btn btn-white btn-icon" aria-label="Button">
                                                             <!-- Download SVG icon from http://tabler-icons.io/i/copy -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
-                                                                height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                                stroke="currentColor" fill="none" stroke-linecap="round"
-                                                                stroke-linejoin="round">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                                                                width="24" height="24" viewBox="0 0 24 24"
+                                                                stroke-width="2" stroke="currentColor" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                 <rect x="8" y="8" width="12" height="12" rx="2" />
                                                                 <path
                                                                     d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
-                                                                </svg>
+                                                            </svg>
                                                         </a>
                                                         <a href="#" class="btn btn-white btn-icon" aria-label="Button">
                                                             <!-- Download SVG icon from http://tabler-icons.io/i/scissors -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
-                                                                height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                                stroke="currentColor" fill="none" stroke-linecap="round"
-                                                                stroke-linejoin="round">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                                                                width="24" height="24" viewBox="0 0 24 24"
+                                                                stroke-width="2" stroke="currentColor" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                 <circle cx="6" cy="7" r="3" />
                                                                 <circle cx="6" cy="17" r="3" />
@@ -1126,10 +1148,10 @@
                                                         </a>
                                                         <a href="#" class="btn btn-white btn-icon" aria-label="Button">
                                                             <!-- Download SVG icon from http://tabler-icons.io/i/file-plus -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
-                                                                height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                                stroke="currentColor" fill="none" stroke-linecap="round"
-                                                                stroke-linejoin="round">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                                                                width="24" height="24" viewBox="0 0 24 24"
+                                                                stroke-width="2" stroke="currentColor" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
                                                                 <path
@@ -1139,10 +1161,10 @@
                                                         </a>
                                                         <a href="#" class="btn btn-white btn-icon" aria-label="Button">
                                                             <!-- Download SVG icon from http://tabler-icons.io/i/file-minus -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
-                                                                height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                                stroke="currentColor" fill="none" stroke-linecap="round"
-                                                                stroke-linejoin="round">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                                                                width="24" height="24" viewBox="0 0 24 24"
+                                                                stroke-width="2" stroke="currentColor" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
                                                                 <path
@@ -1173,7 +1195,8 @@
                                                             <span class="form-check-label">Option 3</span>
                                                         </label>
                                                         <label class="form-check">
-                                                            <input class="form-check-input" type="radio" checked disabled>
+                                                            <input class="form-check-input" type="radio" checked
+                                                                disabled>
                                                             <span class="form-check-label">Option 4</span>
                                                         </label>
                                                     </div>
@@ -1204,7 +1227,8 @@
                                                         </label>
                                                         <label class="form-check">
                                                             <input class="form-check-input" type="checkbox" disabled>
-                                                            <span class="form-check-label">Disabled checkbox input</span>
+                                                            <span class="form-check-label">Disabled checkbox
+                                                                input</span>
                                                         </label>
                                                         <label class="form-check">
                                                             <input class="form-check-input" type="checkbox" checked>
@@ -1246,7 +1270,8 @@
                                                             Longer checkbox item that wraps on to two separate lines
                                                         </span>
                                                         <span class="form-check-description">
-                                                            Ab alias aut, consequuntur cumque esse eveniet incidunt laborum
+                                                            Ab alias aut, consequuntur cumque esse eveniet incidunt
+                                                            laborum
                                                             minus molestiae.
                                                         </span>
                                                     </label>
@@ -1287,7 +1312,8 @@
                                                             <label class="row">
                                                                 <span class="col">Push Notifications</span>
                                                                 <span class="col-auto">
-                                                                    <label class="form-check form-check-single form-switch">
+                                                                    <label
+                                                                        class="form-check form-check-single form-switch">
                                                                         <input class="form-check-input" type="checkbox"
                                                                             checked>
                                                                     </label>
@@ -1298,7 +1324,8 @@
                                                             <label class="row">
                                                                 <span class="col">SMS Notifications</span>
                                                                 <span class="col-auto">
-                                                                    <label class="form-check form-check-single form-switch">
+                                                                    <label
+                                                                        class="form-check form-check-single form-switch">
                                                                         <input class="form-check-input" type="checkbox">
                                                                     </label>
                                                                 </span>
@@ -1308,7 +1335,8 @@
                                                             <label class="row">
                                                                 <span class="col">Email Notifications</span>
                                                                 <span class="col-auto">
-                                                                    <label class="form-check form-check-single form-switch">
+                                                                    <label
+                                                                        class="form-check form-check-single form-switch">
                                                                         <input class="form-check-input" type="checkbox"
                                                                             checked>
                                                                     </label>
@@ -1540,8 +1568,8 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label">Range input</label>
-                                                    <input type="range" class="form-range mb-2" value="40" min="0" max="100"
-                                                        step="10">
+                                                    <input type="range" class="form-range mb-2" value="40" min="0"
+                                                        max="100" step="10">
                                                     <div class="form-range mb-2" id="range-simple"></div>
                                                     <div class="form-range mb-2" id="range-connect"></div>
                                                     <div class="form-range mb-2 text-green" id="range-color"></div>
@@ -1555,10 +1583,10 @@
                                                             id="datepicker-icon" value="2020-06-20" />
                                                         <span class="input-icon-addon">
                                                             <!-- Download SVG icon from http://tabler-icons.io/i/calendar -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
-                                                                height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                                stroke="currentColor" fill="none" stroke-linecap="round"
-                                                                stroke-linejoin="round">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                                                                width="24" height="24" viewBox="0 0 24 24"
+                                                                stroke-width="2" stroke="currentColor" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                 <rect x="4" y="5" width="16" height="16" rx="2" />
                                                                 <line x1="16" y1="3" x2="16" y2="7" />
@@ -1571,10 +1599,10 @@
                                                     <div class="input-icon">
                                                         <span class="input-icon-addon">
                                                             <!-- Download SVG icon from http://tabler-icons.io/i/calendar -->
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
-                                                                height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                                stroke="currentColor" fill="none" stroke-linecap="round"
-                                                                stroke-linejoin="round">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                                                                width="24" height="24" viewBox="0 0 24 24"
+                                                                stroke-width="2" stroke="currentColor" fill="none"
+                                                                stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                 <rect x="4" y="5" width="16" height="16" rx="2" />
                                                                 <line x1="16" y1="3" x2="16" y2="7" />
@@ -1600,7 +1628,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="progress">
-                                                        <div class="progress-bar progress-bar-indeterminate bg-green"></div>
+                                                        <div class="progress-bar progress-bar-indeterminate bg-green">
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="mb-3">
@@ -1612,12 +1641,12 @@
                                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                                     class="icon text-github" width="24" height="24"
                                                                     viewBox="0 0 24 24" stroke-width="2"
-                                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                                    stroke-linejoin="round">
+                                                                    stroke="currentColor" fill="none"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <path
                                                                         d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-                                                                    </svg>
+                                                                </svg>
                                                                 Login with Github
                                                             </a>
                                                         </div>
@@ -1627,12 +1656,12 @@
                                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                                     class="icon text-twitter" width="24" height="24"
                                                                     viewBox="0 0 24 24" stroke-width="2"
-                                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                                    stroke-linejoin="round">
+                                                                    stroke="currentColor" fill="none"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <path
                                                                         d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
-                                                                    </svg>
+                                                                </svg>
                                                                 Login with Twitter
                                                             </a>
                                                         </div>
@@ -1742,7 +1771,8 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label">Select with flags</label>
-                                                    <select type="text" class="form-select" id="select-countries" value="">
+                                                    <select type="text" class="form-select" id="select-countries"
+                                                        value="">
                                                         <option value="pl"
                                                             data-custom-properties="&lt;span class=&quot;flag flag-xs flag-country-pl&quot;&gt;&lt;/span&gt;">
                                                             Poland</option>
@@ -1772,7 +1802,8 @@
                                                     </select>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label class="form-label">Advanced select with validation state</label>
+                                                    <label class="form-label">Advanced select with validation
+                                                        state</label>
                                                     <select type="text" class="form-select mb-3 is-valid"
                                                         id="select-countries-valid" value="">
                                                         <option value="pl">Poland</option>
@@ -1813,7 +1844,8 @@
                                         <div>
                                             <input type="email" class="form-control" aria-describedby="emailHelp"
                                                 placeholder="Enter email">
-                                            <small class="form-hint">We'll never share your email with anyone else.</small>
+                                            <small class="form-hint">We'll never share your email with anyone
+                                                else.</small>
                                         </div>
                                     </div>
                                     <div class="form-group mb-3 ">
@@ -1821,7 +1853,8 @@
                                         <div>
                                             <input type="password" class="form-control" placeholder="Password">
                                             <small class="form-hint">
-                                                Your password must be 8-20 characters long, contain letters and numbers, and
+                                                Your password must be 8-20 characters long, contain letters and numbers,
+                                                and
                                                 must not contain
                                                 spaces, special characters, or emoji.
                                             </small>
@@ -1871,7 +1904,8 @@
                                         <div class="col">
                                             <input type="email" class="form-control" aria-describedby="emailHelp"
                                                 placeholder="Enter email">
-                                            <small class="form-hint">We'll never share your email with anyone else.</small>
+                                            <small class="form-hint">We'll never share your email with anyone
+                                                else.</small>
                                         </div>
                                     </div>
                                     <div class="form-group mb-3 row">
@@ -1879,7 +1913,8 @@
                                         <div class="col">
                                             <input type="password" class="form-control" placeholder="Password">
                                             <small class="form-hint">
-                                                Your password must be 8-20 characters long, contain letters and numbers, and
+                                                Your password must be 8-20 characters long, contain letters and numbers,
+                                                and
                                                 must not contain
                                                 spaces, special characters, or emoji.
                                             </small>
@@ -1924,9 +1959,9 @@
 
 
     @push('before-scripts')
-      {{-- <script src="{{ asset('dist/libs/nouislider/distribute/nouislider.min.js')}}"></script> --}}
-      <script src="{{ asset('dist/libs/litepicker/dist/litepicker.js')}}"></script>
-      <script src="{{ asset('dist/libs/choices.js/public/assets/scripts/choices.js')}}"></script>
+    {{-- <script src="{{ asset('dist/libs/nouislider/distribute/nouislider.min.js')}}"></script> --}}
+    <script src="{{ asset('libs/litepicker/dist/litepicker.js')}}"></script>
+    <script src="{{ asset('libs/choices.js/public/assets/scripts/choices.js')}}"></script>
     @endpush
 
     @push('after-scripts')
