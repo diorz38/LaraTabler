@@ -10,8 +10,8 @@
       }
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     // @formatter:off
     noUiSlider.create(document.getElementById('range-connect'), {
       start: [60, 90],
@@ -23,8 +23,8 @@
       }
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     // @formatter:off
     noUiSlider.create(document.getElementById('range-color'), {
       start: 40,
@@ -36,21 +36,21 @@
       }
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     // @formatter:off
     document.addEventListener("DOMContentLoaded", function () {
       window.Litepicker && (new Litepicker({
         element: document.getElementById('datepicker-default'),
         buttonText: {
           previousMonth: '<svg xmlns="http://www.w3.org/2000/svg" class= "icon" width="24" height="24" viewBox="0 0 24 24" stroke- width="2" stroke = "currentColor" fill="none" stroke- linecap="round" stroke - linejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="15 6 9 12 15 18" /></svg>',
-    			nextMonth: '<svg xmlns = "http://www.w3.org/2000/svg" class= "icon" width = "24" height = "24" viewBox = "0 0 24 24" stroke - width="2" stroke = "currentColor" fill = "none" stroke - linecap="round" stroke - linejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>',
+    	  nextMonth: '<svg xmlns = "http://www.w3.org/2000/svg" class= "icon" width = "24" height = "24" viewBox = "0 0 24 24" stroke - width="2" stroke = "currentColor" fill = "none" stroke - linecap="round" stroke - linejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>',
     		},
     	}));
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     // @formatter:off
     document.addEventListener("DOMContentLoaded", function () {
       window.Litepicker && (new Litepicker({
@@ -62,8 +62,8 @@
     	}));
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     // @formatter:off
     document.addEventListener("DOMContentLoaded", function () {
       window.Litepicker && (new Litepicker({
@@ -75,8 +75,8 @@
     	}));
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     // @formatter:off
     document.addEventListener("DOMContentLoaded", function () {
       window.Litepicker && (new Litepicker({
@@ -89,8 +89,8 @@
     	}));
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     // @formatter:off
     document.addEventListener("DOMContentLoaded", function () {
       var el;
@@ -109,8 +109,8 @@
       }));
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     // @formatter:off
     document.addEventListener("DOMContentLoaded", function () {
       var el;
@@ -129,8 +129,8 @@
       }));
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     // @formatter:off
     document.addEventListener("DOMContentLoaded", function () {
       var el;
@@ -149,8 +149,8 @@
       }));
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     // @formatter:off
     document.addEventListener("DOMContentLoaded", function () {
       var el;
@@ -182,8 +182,8 @@
       }));
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     // @formatter:off
     document.addEventListener("DOMContentLoaded", function () {
       var el;
@@ -215,8 +215,8 @@
       }));
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     // @formatter:off
     document.addEventListener("DOMContentLoaded", function () {
       var el;
@@ -248,8 +248,8 @@
       }));
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     // @formatter:off
     document.addEventListener("DOMContentLoaded", function () {
       var el;
@@ -268,8 +268,8 @@
       }));
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     // @formatter:off
     document.addEventListener("DOMContentLoaded", function () {
       var el;
@@ -288,8 +288,8 @@
       }));
     });
     // @formatter:on
-  </script>
-  <script>
+</script>
+<script>
     let sliderTriggerList = [].slice.call(document.querySelectorAll("[data-slider]"));
     sliderTriggerList.map(function (sliderTriggerEl) {
       let options = {};
@@ -301,4 +301,4 @@
         window[options['js-name']] = slider;
       }
     });
-  </script>
+</script>
