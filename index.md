@@ -8,7 +8,7 @@ The package that used is:
 1. Jetstrap (Bootstrap version of Jetstream)
 2. Spatie Laravel Permissions
 
-Template: Tabler v1.0.0.beta3 (bootstrap 5)
+Template: **Tabler v1.0.0.beta3** (bootstrap 5)
 
 ### How to install
 1. run `create-project diorz38/laratabler example-app`
