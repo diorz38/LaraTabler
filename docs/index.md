@@ -15,7 +15,7 @@ Template: **Tabler v1.0.0.beta3** (bootstrap 5)
 3. run `php artisan migrate`
 4. create/register first user (as admin by default)
 5. run `php artisan lumki:setup` follow the **onscreen instructions**, to setup roles-permissions for jetstream
-6. run `npm install && npm run dev`
+6. run `npm install && npm run dev` (optional)
 7. and you ready to go
 
 ### Screenshoot
