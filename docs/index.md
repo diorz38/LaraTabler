@@ -13,9 +13,10 @@ Template: **Tabler v1.0.0.beta3** (bootstrap 5)
 1. run `create-project diorz38/laratabler example-app`
 2. run `touch database\database.sqlite` (default is sqlite, you can change to mysql, or other)
 3. run `php artisan migrate`
-4. run `php artisan lumki:setup` follow the **onscreen instructions**, to setup roles-permissions for jetstream
-5. run `npm install && npm run dev`
-6. and you ready to go
+4. crrate/register first user (as admin by default)
+5. run `php artisan lumki:setup` follow the **onscreen instructions**, to setup roles-permissions for jetstream
+6. run `npm install && npm run dev`
+7. and you ready to go
 
 ### Screenshoot
 <p>
