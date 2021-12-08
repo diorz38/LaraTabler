@@ -12,7 +12,10 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
+   .js('node_modules/@tabler/core/dist/js/tabler.min.js', 'public/js')
+
+    // .sass('resources/sass/app.scss', 'public/css')
+    .css('resources/css/app.css', 'public/css')
     .webpackConfig(require('./webpack.config'));
 
 if (mix.inProduction()) {
