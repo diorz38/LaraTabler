@@ -2,17 +2,21 @@
     <div class="page-wrapper">
         <div class="container-xl">
             <!-- Page title -->
-            <x-slot name="header"><div class="container-xl"><div class="page-header d-print-none">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <h2 class="page-title">
-                            Maps
-                        </h2>
+            <x-slot name="header">
+                <div class="container-xl">
+                    <div class="page-header d-print-none">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h2 class="page-title">
+                                    Maps
+                                </h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
-        </div></x-slot name="header"><div class="page-header d-print-none">
+        </x-slot>
+        <div class="page-header d-print-none">
             <div class="container-xl">
                 <div class="row">
                     <div class="col-lg-6">
@@ -39,7 +43,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12">
+                    {{-- <div class="col-lg-12">
                         <div class="card">
                             <div class="ratio ratio-2by1">
                                 <div>
@@ -47,8 +51,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-12">
+                    </div> --}}
+                    {{-- <div class="col-lg-12">
                         <div class="card">
                             <div class="ratio ratio-2by1">
                                 <div>
@@ -56,7 +60,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -75,8 +79,8 @@
             var map = new mapboxgl.Map({
                 container: 'map-simple',
                 style: 'mapbox://styles/mapbox/streets-v11',
-                zoom: 13,
-                center: [13.404900, 52.518827],
+                zoom: 12,
+                center: [107.6191228, -6.9174639107],
             });
         });
         // @formatter:on
@@ -89,12 +93,72 @@
                 container: 'map-light',
                 style: 'mapbox://styles/mapbox/light-v10',
                 zoom: 11,
-                center: [-0.2416782, 51.5285582],
+                center: [107.6191228, -6.9174639107],
+            });
+            map.on('load', function () {
+            // Add an image to use as a custom marker
+                map.loadImage(
+                    'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+                    function (error, image) {
+                        if (error) throw error;
+                        map.addImage('custom-marker', image);
+                        // Add a GeoJSON source with 2 points
+                        map.addSource('points', {
+                        'type': 'geojson',
+                        'data': {
+                        'type': 'FeatureCollection',
+                        'features': [
+                            {
+                            // feature for Mapbox DC
+                            'type': 'Feature',
+                            'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                107.5641565,-6.9104397
+                            ]
+                            },
+                            'properties': {
+                            'title': 'Musium Geologi'
+                            }
+                            },
+                            {
+                            // feature for Mapbox SF
+                            'type': 'Feature',
+                            'geometry': {
+                            'type': 'Point',
+                            'coordinates': [107.6387796,-6.8987345]
+                            },
+                            'properties': {
+                            'title': 'BPS Prov Jabar'
+                            }
+                            }
+                        ]
+                        }
+                    });
+
+                    // Add a symbol layer
+                    map.addLayer({
+                        'id': 'points',
+                        'type': 'symbol',
+                        'source': 'points',
+                        'layout': {
+                        'icon-image': 'custom-marker',
+                        // get the title name from the source's "title" property
+                        'text-field': ['get', 'title'],
+                        'text-font': [
+                        'Open Sans Semibold',
+                        'Arial Unicode MS Bold'
+                        ],
+                        'text-offset': [0, 1.25],
+                        'text-anchor': 'top'
+                        }
+                    });
+                });
             });
         });
-        // @formatter:on
+    // @formatter:on
     </script>
-    <script>
+    {{-- <script>
         // @formatter:off
         document.addEventListener("DOMContentLoaded", function() {
             mapboxgl.accessToken = 'pk.eyJ1IjoiY29kZWNhbG0iLCJhIjoiSzRiOVJvQSJ9.BUVkTT6IYs83xSUs4H7bjQ';
@@ -104,7 +168,7 @@
                 zoom: 1,
                 center: [0, 0],
             });
-            new mapboxgl.Marker({ color: "#206bc4" }).setLngLat([-58.666667, -34.58333333]).addTo(map);
+            new mapboxgl.Marker({ color: "#206bc4" }).setLngLat([107.5641565,-6.9104397]).addTo(map);
             new mapboxgl.Marker({ color: "#206bc4" }).setLngLat([16.366667, 48.2]).addTo(map);
             new mapboxgl.Marker({ color: "#206bc4" }).setLngLat([116.383333, 39.91666667]).addTo(map);
             new mapboxgl.Marker({ color: "#206bc4" }).setLngLat([149.133333, -35.26666667]).addTo(map);
@@ -112,7 +176,7 @@
             new mapboxgl.Marker({ color: "#206bc4" }).setLngLat([-77, 38.883333]).addTo(map);
         });
         // @formatter:on
-    </script>
+    </>
     <script>
         // @formatter:off
         document.addEventListener("DOMContentLoaded", function() {
@@ -125,7 +189,7 @@
             });
         });
         // @formatter:on
-    </script>
+    </script> --}}
 
     @endpush
 
