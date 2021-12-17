@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Inertia\Middleware;
+use Auth;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -25,6 +26,17 @@ class HandleInertiaRequests extends Middleware
     public function version(Request $request)
     {
         return parent::version($request);
+    }
+
+    public function rootView(Request $request)
+    {
+        if (!Auth::user()) {
+           return 'guest';
+        }else{
+            return 'app';
+        }
+
+        return parent::rootView($request);
     }
 
     /**

@@ -18,11 +18,11 @@ import Welcome from "@/Pages/HomeDashboard.vue"
 import Footer from '@/Shared/Footer.vue'
 
 export default defineComponent({
+//   meta: { bodyClass: 'bg-light' },
   components: {
     AppLayout,
     Welcome,
     Footer,
-
   }
 });
 </script>

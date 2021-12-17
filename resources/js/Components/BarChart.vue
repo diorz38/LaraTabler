@@ -8,7 +8,7 @@
 import VueApexCharts from 'vue3-apexcharts'
 
 export default {
-  name: 'Chart',
+  name: 'BarChart',
   components: {
     apexcharts: VueApexCharts,
   },
