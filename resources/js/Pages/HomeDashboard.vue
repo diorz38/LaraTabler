@@ -186,7 +186,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h3 class="card-title">Traffic summary</h3>
-                                        <div id="chart-mentions" class="chart-lg"></div>
+                                        <BarChart />
                                     </div>
                                 </div>
                             </div>
@@ -1483,10 +1483,13 @@
 <script>
 import { defineComponent } from 'vue'
 import JetApplicationLogo from '@/Jetstream/ApplicationLogo.vue'
+import BarChart from '@/Components/BarChart.vue'
 
 export default defineComponent({
     components: {
         JetApplicationLogo,
+        BarChart,
     },
+
 })
 </script>
