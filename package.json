@@ -29,6 +29,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "@tabler/core": "^1.0.0-beta3"
+        "@tabler/core": "^1.0.0-beta5",
+        "ansi-html-community": "0.0.8"
     }
 }
