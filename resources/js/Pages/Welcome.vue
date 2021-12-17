@@ -422,7 +422,7 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h3 class="card-title">Traffic summary</h3>
-                                            <div id="chart-mentions" class="chart-lg"></div>
+                                            <ChartMentions />
                                         </div>
                                     </div>
                                 </div>
@@ -1729,6 +1729,7 @@ import JetDropdown from '@/Jetstream/Dropdown.vue'
 import JetDropdownLink from '@/Jetstream/DropdownLink.vue'
 import JetNavLink from '@/Jetstream/NavLink.vue'
 import Footer from '@/Shared/Footer.vue'
+import ChartMentions from '@/Components/ChartMentions.vue'
 
 export default defineComponent({
     components: {
@@ -1741,6 +1742,8 @@ export default defineComponent({
         JetDropdownLink,
         JetNavLink,
         Footer,
+        ChartMentions,
+
     },
 
     props: {

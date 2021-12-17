@@ -8,7 +8,7 @@ window._ = require('lodash');
 
 import '@popperjs/core'
 
-const bootstrap = require('bootstrap')
+const bootstrap = require('@tabler/core')
 
 window.bootstrap = bootstrap
 
