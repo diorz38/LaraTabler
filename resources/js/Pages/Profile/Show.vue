@@ -3,7 +3,44 @@
         <template #header>
             <h2 class="h4 font-weight-bold">Profile</h2>
         </template>
-        <div class="container-xl my-4">
+        <div class="container-xl my-2">
+            <div class="page-header mb-3">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <span class="avatar avatar-md" style="background-image: url(...)"></span>
+                    </div>
+                    <div class="col">
+                        <h2 class="page-title">{{ $page.props.user.name }}</h2>
+                        <div class="page-subtitle">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <!-- Download SVG icon from http://tabler-icons.io/i/building-skyscraper -->
+                                    <!-- SVG icon code -->
+                                    <a href="#" class="text-reset">{{ $page.props.user.email }}</a>
+                                </div>
+                                <div class="col-auto">
+                                    <!-- Download SVG icon from http://tabler-icons.io/i/users -->
+                                    <!-- SVG icon code -->
+                                    <a href="#" class="text-reset">194 friends</a>
+                                </div>
+                                <div class="col-auto text-success">
+                                    <!-- Download SVG icon from http://tabler-icons.io/i/check -->
+                                    <!-- SVG icon code with class="text-green" -->
+                                    Verified
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-md-flex">
+                        <a href="#" class="btn btn-primary">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/message -->
+                            <!-- SVG icon code -->
+                            Send message
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hr-text">my profiles</div>
             <div v-if="$page.props.jetstream.canUpdateProfileInformation">
                 <update-profile-information-form :user="$page.props.user" />
 

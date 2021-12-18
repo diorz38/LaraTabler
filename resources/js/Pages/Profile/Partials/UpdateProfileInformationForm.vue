@@ -1,11 +1,13 @@
 <template>
   <jet-form-section @submitted="updateProfileInformation">
     <template #title>
-      Profile Information
+      <h3 class="page-title">Profile Information</h3>
     </template>
 
     <template #description>
-      Update your account's profile information and email address.
+        <blockquote class="blockquote">
+          <p>Update your account's profile information and email address.</p>
+        </blockquote>
     </template>
 
     <template #form>

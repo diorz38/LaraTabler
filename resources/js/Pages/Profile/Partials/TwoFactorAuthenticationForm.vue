@@ -1,11 +1,13 @@
 <template>
   <jet-action-section>
     <template #title>
-      Two Factor Authentication
+      <h3 class="page-title">Two Factor Authentication</h3>
     </template>
 
     <template #description>
-      Add additional security to your account using two factor authentication.
+        <blockquote class="blockquote">
+          <p>Add additional security to your account using two factor authentication.</p>
+        </blockquote>
     </template>
 
     <template #content>
@@ -43,7 +45,7 @@
           </div>
 
           <div class="w-75 bg-light rounded p-3">
-            <div v-for="code in recoveryCodes">
+            <div v-for="code in recoveryCodes" :key="code">
               {{ code }}
             </div>
           </div>
