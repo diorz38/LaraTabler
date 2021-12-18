@@ -16,7 +16,7 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
-<body class="d-flex flex-column min-vh-100 bg-dark">
+<body class="d-flex flex-column min-vh-100">
     @inertia
 </body>
 

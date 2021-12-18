@@ -27,3 +27,11 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
+
+Route::get('/packages-info', function () {
+    $metadata = json_decode(file_get_contents(base_path('package-lock.json')));
+    return $metaKeys = collect($metadata->dependencies);
+    return $metaKeys["@inertiajs/inertia"]->version;
+    // return collect($metadata->dependencies)->keys();
+    \Config::set('APP_VERSION', $metadata->version);
+})->name('packages.info');
