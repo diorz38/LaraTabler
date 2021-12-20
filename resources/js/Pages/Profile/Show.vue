@@ -7,7 +7,8 @@
             <div class="page-header mb-3">
                 <div class="row align-items-center">
                     <div class="col-auto">
-                        <span class="avatar avatar-md" style="background-image: url(...)"></span>
+                        <img v-if="$page.props.jetstream.managesProfilePhotos" class="avatar avatar-md" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name" />
+                        <!-- <span class="avatar avatar-md" style="background-image: url(...)"></span> -->
                     </div>
                     <div class="col">
                         <h2 class="page-title">{{ $page.props.user.name }}</h2>

@@ -28,7 +28,9 @@ export default {
           chartOptions: {
             chart: {
               type: 'bar',
-              height: 350
+              height: 350,
+              horizontal: true,
+
             },
             plotOptions: {
               bar: {
@@ -50,7 +52,7 @@ export default {
             },
             yaxis: {
               title: {
-                text: '$ (thousands)'
+                text: 'Rp (juta)'
               }
             },
             fill: {
@@ -59,7 +61,7 @@ export default {
             tooltip: {
               y: {
                 formatter: function (val) {
-                  return "$ " + val + " thousands"
+                  return "Rp " + val + " juta"
                 }
               }
             }

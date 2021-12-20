@@ -26,19 +26,19 @@
 
         <!-- Current Profile Photo -->
         <div class="mt-2" v-show="! photoPreview">
-          <img :src="user.profile_photo_url" alt="Current Profile Photo" class="rounded-circle">
+          <img :src="user.profile_photo_url" alt="Current Profile Photo" class="avatar avatar-md mx-1 mb-2" width="80px">
         </div>
 
         <!-- New Profile Photo Preview -->
         <div class="mt-2" v-show="photoPreview">
-          <img :src="photoPreview" class="rounded-circle" width="80px" height="80px">
+          <img :src="photoPreview" class="avatar avatar-md mx-1 mb-2" width="80px" height="80px" alt="New Profile Photo">
         </div>
 
-        <jet-secondary-button class="mt-2 me-2" type="button" @click.prevent="selectNewPhoto">
+        <jet-secondary-button class="btn btn-outline btn-info btn-sm mx-1 my-2" type="button" @click.prevent="selectNewPhoto">
           Select A New Photo
         </jet-secondary-button>
 
-        <jet-secondary-button type="button" class="mt-2" @click.prevent="deletePhoto" v-if="user.profile_photo_path">
+        <jet-secondary-button type="button" class="btn btn-outline btn-danger btn-sm mx-1 my-1" @click.prevent="deletePhoto" v-if="user.profile_photo_path">
           Remove Photo
         </jet-secondary-button>
 

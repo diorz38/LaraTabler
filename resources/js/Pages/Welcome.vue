@@ -4,10 +4,10 @@
         <div class="container-xl d-flex w-100 h-100 p-3 mx-auto flex-column">
             <header class="row mb-auto">
                 <div class="col-lg-5 col-6">
-                    <img width="110" height="32" class="navbar-brand-image" src="/static/logo-white.svg" />
+                    <img width="110" height="32" class="navbar-brand-image" src="/static/logo-white.svg" alt="SmartKit"/>
                 </div>
                 <div class="col-lg-7 col-6 d-flex">
-                    <div class="ms-auto noshadow">
+                    <div class="ms-auto noshadow" v-if="$page.props.user === null">
                         <a class="nav-link px-0" data-bs-toggle="dropdown" href="#">
                             <div class="dropdown-item-icon">
                                 <LoginIcon stroke="white" />
@@ -18,6 +18,14 @@
                             <Link :href="route('login')" class="dropdown-item">Login</Link>
                             <!-- <a data-test-class="link" data-turbo="false" class="dropdown-item" href="/ru">Indonesia</a> -->
                         </div>
+                    </div>
+                    <div class="ms-auto noshadow" v-else>
+                        <Link :href="route('dashboard')" class="nav-link px-0">
+                            <div class="dropdown-item-icon">
+                                <HomeIcon stroke="white" />
+                            </div>
+                            <span class="d-none d-xl-inline"> Dashboard </span>
+                        </Link>
                     </div>
                 </div>
             </header>
@@ -80,7 +88,7 @@ import JetApplicationMark from '@/Jetstream/ApplicationMark.vue'
 import JetDropdown from '@/Jetstream/Dropdown.vue'
 import JetDropdownLink from '@/Jetstream/DropdownLink.vue'
 import JetNavLink from '@/Jetstream/NavLink.vue'
-import { LoginIcon } from 'vue-tabler-icons'
+import { LoginIcon,HomeIcon } from 'vue-tabler-icons'
 
 export default defineComponent({
     // meta: { bodyClass: 'bg-dark' },
@@ -94,6 +102,7 @@ export default defineComponent({
         JetDropdownLink,
         JetNavLink,
         LoginIcon,
+        HomeIcon,
     },
 
     props: {
