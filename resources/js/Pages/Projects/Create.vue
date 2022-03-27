@@ -1,4 +1,5 @@
 <template>
+    <app-layout title="Dashboard">
   <div>
     <h1 class="mb-8 font-bold text-3xl">
       <inertia-link class="text-indigo-400 hover:text-indigo-600" :href="route('projects')">Projects</inertia-link>
@@ -17,10 +18,11 @@
       </form>
     </div>
   </div>
+    </app-layout>
 </template>
 
 <script>
-import AppLayout from "@/Layouts/AppLayout.vue"
+import Layout from "@/Layouts/AppLayout.vue"
 import Footer from '@/Shared/Footer.vue'
 
 export default {

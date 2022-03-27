@@ -37,9 +37,9 @@
 
         <div class="mb-0">
           <div class="d-flex justify-content-end align-items-baseline">
-            <Link v-if="canResetPassword" :href="route('password.request')" class="text-muted me-3">
+            <!-- <Link v-if="canResetPassword" :href="route('password.request')" class="text-muted me-3">
               Forgot your password?
-            </Link>
+            </Link> -->
 
             <jet-button class="ms-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
               <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">

@@ -31,6 +31,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::resource('projects', ProjectController::class);
 
+Route::get('test-projects', [ProjectController::class, 'testProject']);
+
+
 Route::get('/packages-info', function () {
     $metadata = json_decode(file_get_contents(base_path('package-lock.json')));
     return $metaKeys = collect($metadata->dependencies);
