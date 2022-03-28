@@ -4,6 +4,7 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\InertiaControllers\ProjectController;
+use App\Http\InertiaControllers\BasisKegController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
 
-Route::resource('projects', ProjectController::class);
+Route::group(['prefix' => 'amake','middleware' => 'auth:sanctum'], function(){
+    Route::resource('projects', ProjectController::class,['as' => 'amake']);
+    Route::resource('basiskegs', BasisKegController::class,['as' => 'amake']);    
+});
 
 Route::get('test-projects', [ProjectController::class, 'testProject']);
 

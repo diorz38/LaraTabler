@@ -83,9 +83,14 @@ class ProjectController extends Controller
      * @param Project $project
      * @return Redirect
      */
-    public function update(Request $request, Project $project): Redirect
+    public function update(Request $request, Project $project): \Inertia\Response
     {
-        return Redirect::back()->with('success', 'Project updated.');
+        return Inertia::render('Projects/Show', [
+            'project' => $project,
+            'message' => 'Project updated.',
+            'success' => true,
+        ]);
+        // return Redirect::back()->with('success', 'Project updated.');
     }
 
     /**

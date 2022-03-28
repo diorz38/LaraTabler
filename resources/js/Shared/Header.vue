@@ -98,7 +98,7 @@
                             <div class="dropdown-menu">
                                 <div class="dropdown-menu-columns">
                                     <div class="dropdown-menu-column">
-                                        <Link class="dropdown-item" :href="route('projects.index')"> Daftar Kegiatan </Link>
+                                        <Link class="dropdown-item" :href="route('amake.projects.index')"> Daftar Kegiatan </Link>
                                         <a class="dropdown-item" href="./accordion.html"> Accordion </a>
                                         <a class="dropdown-item" href="./blank.html"> Blank page </a>
                                         <a class="dropdown-item" href="./buttons.html"> Buttons </a>

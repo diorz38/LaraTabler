@@ -60,7 +60,7 @@ export default {
     },
   },
   mounted() {
-    document.body.classList.add("wew");
+    // document.body.classList.add("wew");
   },
   computed: {
     path() {

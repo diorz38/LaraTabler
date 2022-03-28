@@ -13,5 +13,12 @@ class Basis extends Model
 
     protected $guarded = ['id','created_at', 'updated_at'];
 
-
+    public function skf()
+    {
+        return $this->belongsTo('App\Models\Code','seksi_id')->seksi()->select('id','name');
+    }
+    public function kf()
+    {
+        return $this->belongsTo('App\Models\Code','bidang_id')->bidang()->select('id','short_name');
+    }    
 }

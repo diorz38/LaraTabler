@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import AppLayout from "@/Layouts/AppLayout.vue"
+import Layout from "@/Layouts/AppLayout.vue"
 import Footer from '@/Shared/Footer.vue'
 
 export default {

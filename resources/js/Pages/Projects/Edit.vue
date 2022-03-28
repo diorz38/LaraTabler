@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import AppLayout from "@/Layouts/AppLayout.vue"
+import Layout from "@/Layouts/AppLayout.vue"
 import Footer from '@/Shared/Footer.vue'
 
 export default {
@@ -42,7 +42,7 @@ export default {
     data() {
         return {
             form: this.$inertia.form({
-                name: this.project.title,
+                name: this.project.nama,
             }),
         }
     },
