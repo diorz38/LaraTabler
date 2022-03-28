@@ -3,6 +3,7 @@
 namespace App\Http\InertiaControllers;
 
 use App\Models\Basis as BasisKeg;
+use App\Models\KoordFungsi;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -58,8 +59,12 @@ class BasisKegController extends Controller
      */
     public function show(BasisKeg $basiskeg): \Inertia\Response
     {
+        $seksi = KoordFungsi::isActive()->where('parent_id',$basiskeg->bidang_id)->select('id','parent_id','name')->get();
+        $bidang = KoordFungsi::isActive()->where('parent_id',1)->select('id','parent_id','name')->get();
         return Inertia::render('BasisKegs/Show', [
-                'basiskeg' => $basiskeg->with('kf','skf')
+                'basiskeg' => $basiskeg,
+                'bidang' => $bidang,
+                'seksi' => $seksi
             ]);
     }
 
@@ -69,20 +74,35 @@ class BasisKegController extends Controller
      * @param BasisKeg $basiskeg
      * @return \Inertia\Response
      */
-    public function edit(BasisKeg $basiskeg): \Inertia\Response
+    public function edit(BasisKeg $basiskeg, Request $request): \Inertia\Response
     {
+        if($basiskeg->bidang_id)
+        {
+            if(!$request){
+                $seksi = KoordFungsi::isActive()->where('parent_id',$request->bidang_id)->select('id','parent_id','name')->get();
+            }else{
+                $seksi = KoordFungsi::isActive()->where('parent_id',$basiskeg->bidang_id)->select('id','parent_id','name')->get();
+            }
+        }else
+        {
+            $seksi = KoordFungsi::isActive()->where('parent_id',1)->select('id','parent_id','name')->get();
+        }
+        $bidang = KoordFungsi::isActive()->where('parent_id',1)->select('id','parent_id','name')->get();
+
         return Inertia::render('BasisKegs/Edit', [
-                'basiskeg' => $basiskeg
+                'basiskeg' => $basiskeg,
+                'bidang' => $bidang,
+                'seksi' => $seksi
             ]);
     }
 
-    /**
-     * Update the specified resource in storage.
+ /**
+     * Store a newly created resource in storage.
      *
-     * @param BasisKeg $basiskeg
-     * @return \Inertia\Response
+     * @param  Request  $request
+     * @return Redirect
      */
-    public function update(Request $request, BasisKeg $basiskeg): \Inertia\Response
+    public function update(Request $request, BasisKeg $basiskeg)
     {
         Validator::make($request->all(), [
             'seksi_id' => ['required'],
@@ -91,12 +111,14 @@ class BasisKegController extends Controller
             'kd' => ['required'],
         ])->validate();
         $basiskeg->find($basiskeg->id)->update($request->all());
-        return Inertia::render('BasisKegs/Show', [
-                'basiskeg' => $basiskeg,
-                'message' => 'BasisKeg updated.',
-                'success' => true,
-                'updated' => $request,
-            ]);
+        // $basiskeg->first();
+        // return Inertia::render('BasisKegs/Show', [
+        //         'basiskeg' => $basiskeg,
+        //         'message' => 'BasisKeg updated.',
+        //         'success' => true,
+        //         'updated' => $request,
+        //     ]);
+        return redirect()->route('amake.basiskegs.show', $basiskeg)->with('success', 'BasisKeg updated.');
         // return Redirect::back()->with('success', 'BasisKeg updated.');
     }
 

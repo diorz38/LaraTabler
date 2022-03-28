@@ -93,30 +93,26 @@
 
                   </div>
                   <div class="form-group mb-3 row">
-                    <label class="form-label col-3 col-form-label">Seksi</label>
-                    <div class="col">
-                      <select class="form-select" v-model="form.seksi_id">
-                        <option>Pilih Seksi</option>
-                        <option v-bind:value=41 :selected="form.seksi_id == 41">Statistik Pertanian</option>
-                        <option v-bind:value=43 :selected="form.seksi_id == 43">Statistik Pertambangan, Energi dan Konstruksi</option>
-                        <option v-bind:value=40 :selected="form.seksi_id == 40">Statistik Industri</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group mb-3 row">
                     <label class="form-label col-3 col-form-label">Bidang</label>
                     <div class="col">
                       <select class="form-select" v-model="form.bidang_id">
                         <option>Pilih Bidang</option>
-                        <option v-bind:value=2 :selected="form.bidang_id == 2">Umum</option>
-                        <option v-bind:value=3 :selected="form.bidang_id == 3">Statistik Sosial</option>
-                        <option v-bind:value=4 :selected="form.bidang_id == 4">Statistik Produksi</option>
-                        <option v-bind:value=5 :selected="form.bidang_id == 5">Statistik Distribusi</option>
-                        <option v-bind:value=6 :selected="form.bidang_id == 6">Neraca Wilayah dan Analisis Statistik</option>
-                        <option v-bind:value=7 :selected="form.bidang_id == 7">Integrasi Pengolahan dan Diseminasi Statistik</option>
+                        <option v-for="bidang in $page.props.bidang" :key="bidang.id" v-bind:value=bidang.id :selected="form.bidang_id == bidang.id">{{ bidang.name}}</option>
+                      </select>
+                    </div>
+                  </div>                  
+                  <div class="form-group mb-3 row">
+                    <label class="form-label col-3 col-form-label">Seksi</label>
+                    <div class="col">
+                      <select class="form-select" v-model="form.seksi_id">
+                        <option>Pilih Seksi</option>
+                        <option  v-for="seksi in $page.props.seksi" :key="seksi.id" v-bind:value=seksi.id :selected="form.seksi_id == seksi.id">{{ seksi.name}}</option>
+                        <!-- <option v-bind:value=43 :selected="form.seksi_id == 43">Statistik Pertambangan, Energi dan Konstruksi</option>
+                        <option v-bind:value=40 :selected="form.seksi_id == 40">Statistik Industri</option> -->
                       </select>
                     </div>
                   </div>
+
                   <div class="form-group row">
                     <label class="form-label col-3 col-form-label pt-0">Status</label>
                     <div class="col">
