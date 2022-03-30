@@ -11,29 +11,15 @@
 
 
             <div class="navbar-nav flex-row order-md-last">
-                <Link href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode" data-bs-toggle="tooltip" data-bs-placement="bottom">
-                    <!-- Download SVG icon from http://tabler-icons.io/i/moon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-                    </svg>
+                <!-- <Link href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode" data-bs-toggle="tooltip" data-bs-placement="bottom">
+                    <MoonIcon/>
                 </Link>
                 <Link href="?theme=light" class="nav-link px-0 hide-theme-light" title="Enable light mode" data-bs-toggle="tooltip" data-bs-placement="bottom">
-                    <!-- Download SVG icon from http://tabler-icons.io/i/sun -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <circle cx="12" cy="12" r="4" />
-                        <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                    </svg>
-                </Link>
-                <div class="nav-item dropdown d-none d-md-flex me-3">
+                    <SunIcon/>
+                </Link> -->
+                <div class="nav-item dropdown d-md-flex me-3">
                     <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications">
-                        <!-- Download SVG icon from http://tabler-icons.io/i/bell -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
-                            <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
-                        </svg>
+                        <BellIcon/>
                         <span class="badge bg-red"></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end dropdown-menu-card">
@@ -43,31 +29,9 @@
                     </div>
                 </div>
 
-                 <!-- User Menus -->
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
-                        <span class="avatar avatar-sm">
-                            <img v-if="$page.props.jetstream.managesProfilePhotos" class="rounded-circle" width="32" height="32" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name" />
-                        </span>
-                        <!-- <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span> -->
-                        <div class="d-none d-xl-block ps-2">
-                            <div>{{ $page.props.user.name }}</div>
-                            <div class="mt-1 small text-muted">{{ $page.props.user.email }}</div>
-                        </div>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                        <h6 class="dropdown-header small text-muted">Manage Account</h6>
-                        <a href="#" class="dropdown-item">Set status</a>
-                        <Link :href="route('profile.show')" class="dropdown-item">Profile & account</Link>
-                        <Link :href="route('api-tokens.index')" v-if="$page.props.jetstream.hasApiFeatures" class="dropdown-item">API Tokens</Link>
-                        <a href="#" class="dropdown-item">Feedback</a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">Settings</a>
-                        <form @submit.prevent="logout">
-                            <jet-dropdown-link as="button" class="bg-dark text-light">Log out</jet-dropdown-link>
-                        </form>
-                    </div>
-                </div>
+                <!-- User Menus -->
+                <UserMenu v-if="$page.props.user"/>
+
             </div>
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
@@ -77,21 +41,13 @@
                                 <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
                                     <HomeIcon />
                                 </span>
-                                <span class="nav-link-title"> Home </span>
+                                <span class="nav-link-title"> Dashboard </span>
                             </Link>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li v-if="$page.props.user" class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
-                                <span class="nav-link-icon d-md-none d-lg-inline-block"
-                                    ><!-- Download SVG icon from http://tabler-icons.io/i/package -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" />
-                                        <line x1="12" y1="12" x2="20" y2="7.5" />
-                                        <line x1="12" y1="12" x2="12" y2="21" />
-                                        <line x1="12" y1="12" x2="4" y2="7.5" />
-                                        <line x1="16" y1="5.25" x2="8" y2="9.75" />
-                                    </svg>
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <PackageIcon />
                                 </span>
                                 <span class="nav-link-title"> Kegiatan </span>
                             </a>
@@ -99,31 +55,13 @@
                                 <div class="dropdown-menu-columns">
                                     <div class="dropdown-menu-column">
                                         <Link class="dropdown-item" :href="route('amake.projects.index')"> Daftar Kegiatan </Link>
-                                        <a class="dropdown-item" href="./accordion.html"> Accordion </a>
-                                        <a class="dropdown-item" href="./blank.html"> Blank page </a>
-                                        <a class="dropdown-item" href="./buttons.html"> Buttons </a>
-                                        <a class="dropdown-item" href="./cards.html"> Cards </a>
-                                        <a class="dropdown-item" href="./cards-masonry.html"> Cards Masonry </a>
-                                        <a class="dropdown-item" href="./colors.html"> Colors </a>
-                                        <a class="dropdown-item" href="./dropdowns.html"> Dropdowns </a>
-                                        <a class="dropdown-item" href="./icons.html"> Icons </a>
-                                        <a class="dropdown-item" href="./modals.html"> Modals </a>
-                                        <a class="dropdown-item" href="./maps.html"> Maps </a>
-                                        <a class="dropdown-item" href="./map-fullsize.html"> Map fullsize </a>
-                                        <a class="dropdown-item" href="./maps-vector.html"> Vector maps </a>
+                                        <Link class="dropdown-item" href="#"> Daftar SubKegiatan </Link>
+                                        <div class="dropdown-divider"/>
+                                        <Link class="dropdown-item" href="#"> Daftar Skor Wilayah </Link>
                                     </div>
                                     <div class="dropdown-menu-column">
-                                        <a class="dropdown-item" href="./navigation.html"> Navigation </a>
-                                        <a class="dropdown-item" href="./charts.html"> Charts </a>
-                                        <a class="dropdown-item" href="./pagination.html"> Pagination </a>
-                                        <a class="dropdown-item" href="./skeleton.html"> Skeleton </a>
-                                        <a class="dropdown-item" href="./tabs.html"> Tabs </a>
-                                        <a class="dropdown-item" href="./tables.html"> Tables </a>
-                                        <a class="dropdown-item" href="./carousel.html"> Carousel </a>
-                                        <a class="dropdown-item" href="./lists.html"> Lists </a>
-                                        <a class="dropdown-item" href="./typography.html"> Typography </a>
-                                        <a class="dropdown-item" href="./offcanvas.html"> Offcanvas </a>
-                                        <a class="dropdown-item" href="./markdown.html"> Markdown </a>
+                                        <Link class="dropdown-item" href="#"> Navigation </Link>
+                                        <Link class="dropdown-item" href="#"> Charts </Link>
                                         <div class="dropend">
                                             <a class="dropdown-item dropdown-toggle" href="#sidebar-authentication" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false"> Authentication </a>
                                             <div class="dropdown-menu">
@@ -145,30 +83,19 @@
                                     </div>
                                 </div>
                             </div>
+
                         </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
-                                <span class="nav-link-icon d-md-none d-lg-inline-block"
-                                    ><!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
-                                    </svg>
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <StarIcon />
                                 </span>
-                                <span class="nav-link-title"> Documentation </span>
+                                <span class="nav-link-title"> Documentasi </span>
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="./activity.html"> Activity </a>
-                                <a class="dropdown-item" href="./gallery.html"> Gallery </a>
-                                <a class="dropdown-item" href="./invoice.html"> Invoice </a>
-                                <a class="dropdown-item" href="./search-results.html"> Search results </a>
-                                <a class="dropdown-item" href="./pricing.html"> Pricing cards </a>
-                                <a class="dropdown-item" href="./users.html"> Users </a>
-                                <a class="dropdown-item" href="./license.html"> License </a>
-                                <a class="dropdown-item" href="./music.html"> Music </a>
-                                <a class="dropdown-item" href="./widgets.html"> Widgets </a>
-                                <a class="dropdown-item" href="./wizard.html"> Wizard </a>
+                                <Link class="dropdown-item" href="#"> Panduan Penggunaan </Link>
+                                <Link class="dropdown-item" href="#"> Dev App Log </Link>
                             </div>
                         </li>
                     </ul>
@@ -186,7 +113,8 @@ import JetDropdown from '@/Jetstream/Dropdown.vue'
 import JetDropdownLink from '@/Jetstream/DropdownLink.vue'
 import JetNavLink from '@/Jetstream/NavLink.vue'
 import { Head, Link } from '@inertiajs/inertia-vue3'
-import { LoginIcon,HomeIcon } from 'vue-tabler-icons'
+import UserMenu from '@/Shared/UserMenu.vue'
+import { LoginIcon,HomeIcon,PackageIcon,BellIcon,StarIcon,SunIcon,MoonIcon } from 'vue-tabler-icons'
 
 export default {
     props: {
@@ -202,8 +130,9 @@ export default {
         JetDropdownLink,
         JetNavLink,
         Link,
-        LoginIcon,
-        HomeIcon,
+        UserMenu,
+        LoginIcon,HomeIcon,PackageIcon,BellIcon,StarIcon,SunIcon,MoonIcon,
+
     },
 
     data() {

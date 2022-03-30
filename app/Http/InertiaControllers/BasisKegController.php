@@ -26,6 +26,8 @@ class BasisKegController extends Controller
                 'basiskegs' => $basisKegiatan->paginate(10),
                 'basiskegs_count' => $count,
                 'total_pages' => $ceil,
+                'pagePretitle' => 'Master',
+                'pageTitle' => 'Basis Kegiatan'
 
         ]);
     }
@@ -37,7 +39,11 @@ class BasisKegController extends Controller
      */
     public function create(): \Inertia\Response
     {
-        return Inertia::render('BasisKegs/Create');
+        return Inertia::render('BasisKegs/Create',[
+            'pagePretitle' => 'Master',
+            'pageTitle' => 'Basis Kegiatan'
+
+    ]);
     }
 
     /**
@@ -64,7 +70,10 @@ class BasisKegController extends Controller
         return Inertia::render('BasisKegs/Show', [
                 'basiskeg' => $basiskeg,
                 'bidang' => $bidang,
-                'seksi' => $seksi
+                'seksi' => $seksi,
+                'pagePretitle' => 'Master',
+                'pageTitle' => 'Basis Kegiatan'
+
             ]);
     }
 
@@ -92,8 +101,10 @@ class BasisKegController extends Controller
         return Inertia::render('BasisKegs/Edit', [
                 'basiskeg' => $basiskeg,
                 'bidang' => $bidang,
-                'seksi' => $seksi
-            ]);
+                'seksi' => $seksi,
+                'pagePretitle' => 'Master',
+                'pageTitle' => 'Basis Kegiatan'
+                ]);
     }
 
  /**
@@ -111,15 +122,7 @@ class BasisKegController extends Controller
             'kd' => ['required'],
         ])->validate();
         $basiskeg->find($basiskeg->id)->update($request->all());
-        // $basiskeg->first();
-        // return Inertia::render('BasisKegs/Show', [
-        //         'basiskeg' => $basiskeg,
-        //         'message' => 'BasisKeg updated.',
-        //         'success' => true,
-        //         'updated' => $request,
-        //     ]);
         return redirect()->route('amake.basiskegs.show', $basiskeg)->with('success', 'BasisKeg updated.');
-        // return Redirect::back()->with('success', 'BasisKeg updated.');
     }
 
     /**
