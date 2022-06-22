@@ -60,7 +60,7 @@
                                         <Link class="dropdown-item" href="#"> Daftar Skor Wilayah </Link>
                                     </div>
                                     <div class="dropdown-menu-column">
-                                        <Link class="dropdown-item" href="#"> Navigation </Link>
+                                        <Link class="dropdown-item" :href="route('amake.basiskegs.index')"> Basis Kegiatan </Link>
                                         <Link class="dropdown-item" href="#"> Charts </Link>
                                         <div class="dropend">
                                             <a class="dropdown-item dropdown-toggle" href="#sidebar-authentication" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false"> Authentication </a>

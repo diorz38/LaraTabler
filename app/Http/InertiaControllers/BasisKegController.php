@@ -65,8 +65,12 @@ class BasisKegController extends Controller
      */
     public function show(BasisKeg $basiskeg): \Inertia\Response
     {
-        $seksi = KoordFungsi::isActive()->where('parent_id',$basiskeg->bidang_id)->select('id','parent_id','name')->get();
-        $bidang = KoordFungsi::isActive()->where('parent_id',1)->select('id','parent_id','name')->get();
+        $seksi = KoordFungsi::isActive()
+            ->where('parent_id',$basiskeg->bidang_id)
+            ->select('id','parent_id','name')->get();
+        $bidang = KoordFungsi::isActive()
+            ->where('parent_id',1)
+            ->select('id','parent_id','name')->get();
         return Inertia::render('BasisKegs/Show', [
                 'basiskeg' => $basiskeg,
                 'bidang' => $bidang,
@@ -88,9 +92,15 @@ class BasisKegController extends Controller
         if($basiskeg->bidang_id)
         {
             if(!$request){
-                $seksi = KoordFungsi::isActive()->where('parent_id',$request->bidang_id)->select('id','parent_id','name')->get();
+                $seksi = KoordFungsi::isActive()
+                ->where('parent_id',$request->bidang_id)
+                ->select('id','parent_id','name')
+                ->get();
             }else{
-                $seksi = KoordFungsi::isActive()->where('parent_id',$basiskeg->bidang_id)->select('id','parent_id','name')->get();
+                $seksi = KoordFungsi::isActive()
+                ->where('parent_id',$basiskeg->bidang_id)
+                ->select('id','parent_id','name')
+                ->get();
             }
         }else
         {
@@ -142,6 +152,7 @@ class BasisKegController extends Controller
      * @param BasisKeg $basiskeg
      * @return Redirect
      */
+
     public function restore(BasisKeg $basiskeg): Redirect
     {
         $basiskeg->restore();

@@ -215,17 +215,17 @@ class ProjectController extends Controller
                 'total_sub_keg' => $induk->subsKeg->count(),
                 'total_by_jenis_keg' => [
                     'persiapan' => \DB::table('projects')->where('parent_id',$induk->id)
-                                ->whereJsonContains('jenis_keg', 'persiapan')
-                                ->count(),
+                        ->whereJsonContains('jenis_keg', 'persiapan')
+                        ->count(),
                     'pelaksanaan' =>\DB::table('projects')->where('parent_id',$induk->id)
-                                    ->whereJsonContains('jenis_keg', 'pelaksanaan')
-                                    ->count(),
+                        ->whereJsonContains('jenis_keg', 'pelaksanaan')
+                        ->count(),
                     'pengolahan' =>\DB::table('projects')->where('parent_id',$induk->id)
-                    ->whereJsonContains('jenis_keg', 'pengolahan')
-                    ->count(),
+                        ->whereJsonContains('jenis_keg', 'pengolahan')
+                        ->count(),
                     'evaluasi' =>\DB::table('projects')->where('parent_id',$induk->id)
-                    ->whereJsonContains('jenis_keg', 'evaluasi')
-                    ->count(),
+                        ->whereJsonContains('jenis_keg', 'evaluasi')
+                        ->count(),
                     ]
             ]);
     }

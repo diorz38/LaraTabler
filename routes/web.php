@@ -16,6 +16,7 @@ use App\Http\InertiaControllers\BasisKegController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::prefix('/admin')->group(__DIR__.'/admin.php');
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -34,14 +35,3 @@ Route::group(['prefix' => 'amake','middleware' => 'auth:sanctum'], function(){
     Route::resource('projects', ProjectController::class,['as' => 'amake']);
     Route::resource('basiskegs', BasisKegController::class,['as' => 'amake']);    
 });
-
-Route::get('test-projects', [ProjectController::class, 'testProject']);
-
-
-Route::get('/packages-info', function () {
-    $metadata = json_decode(file_get_contents(base_path('package-lock.json')));
-    return $metaKeys = collect($metadata->dependencies);
-    return $metaKeys["@inertiajs/inertia"]->version;
-    // return collect($metadata->dependencies)->keys();
-    \Config::set('APP_VERSION', $metadata->version);
-})->name('packages.info');
